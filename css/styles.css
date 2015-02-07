@@ -1,0 +1,139 @@
+html, body {
+    width:100%;
+    height: 100%;
+    overflow:hidden;
+    margin:auto;
+}
+body {
+    text-align: left;
+    overflow:hidden;
+    font-size: 1em;   
+    font-family: 'Open Sans', sans-serif;
+}
+
+#map {
+    height:100%;
+    width:100%;
+    max-width:100%;
+}
+
+#searchBox
+{
+    position:absolute;
+    z-index:2;
+    top:10px;
+    left:20%;
+    width:60%;
+}
+
+#searchBox .twitter-typeahead
+{
+    width:100%;
+    height:100%;
+}
+
+#searchInput
+{
+    width:100%;
+    height:100%;
+    font-weight: 900;
+    font-size:24pt;
+    border: 2pt solid #CDCDCD;
+    -moz-border-radius: 4px;
+    border-radius: 4px;
+    padding: 0.2em;
+}
+
+#preloader
+{
+    width: 100%;
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    background: #fff url("../img/loading.gif") no-repeat center center;
+    position: absolute;
+    z-index: 999;
+}
+.loading
+{
+    background-position: center center;
+    width: 100%;
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    background: #fff url("../img/loading.gif") no-repeat center center;
+    position: absolute;
+    z-index: 999; 
+}
+
+.search-loading
+{
+    height:26px;
+    width:26px;
+    -moz-border-radius: 10px;
+    border-radius: 10px;
+    display:inline-block;
+    background: #fff url("../img/loading.gif") no-repeat center center;
+}
+.icon {
+    display: inline-block;
+    background-image: url(../img/icon-sprite.png);
+    background-repeat: no-repeat;
+}
+
+.icon-map-search {
+    background-position: -100px -59px;
+    height: 22px;
+    width: 22px;
+    position:absolute;
+    right:0.25em;
+    bottom:1em;
+}
+
+.search-loading-icon {
+    position:absolute;
+    right:0.25em;
+    bottom:1em;
+}
+
+.icon-map-marker {
+    background-position: -28px -50px;
+    height: 34px;
+    width: 23px
+}
+
+.typeahead {
+    background-color: #FFFFFF;
+}
+.tt-dropdown-menu {
+    background-color: #FFFFFF;
+    border: 1px solid rgba(0, 0, 0, 0.2);
+    border-radius: 4px 4px 4px 4px;
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
+    margin-top: 4px;
+    padding: 4px 0;
+    width: 100%;
+    max-height: 300px;
+    overflow: auto;
+}
+.tt-suggestion {
+    font-size: 1.3em;
+    line-height: 1.5em;
+    padding: 3px 10px;
+}
+.tt-suggestion.tt-cursor {
+    background-color: #064780;
+    color: #FFFFFF;
+    cursor: pointer;
+}
+.tt-suggestion p {
+    margin: 0;
+}
+.tt-suggestion + .tt-suggestion {
+    border-top: 1px solid #ccc;
+}
+.typeahead-header {
+    margin: 0 5px 5px 5px;
+    padding: 3px 0;
+    border-bottom: 2px solid #333;
+}
