@@ -250,29 +250,30 @@ define(["dojo/_base/declare", "esri/map", "esri/geometry/Extent", "esri/geometry
                 name: "camp",
                 displayKey: "name",
                 source: campBH.ttAdapter(),
+                // what the header looks like for this source in the suggestions drop down
                 templates: {
-                    header: "<h4 class='typeahead-header'><span class='icon icon-camp'></span>&nbsp;Campgrounds</h4>"  
+                    header: "<h1 class='typeahead-header'><span class='icon icon-camp'></span>&nbsp;Campgrounds</h1>"  
                 }
             }, {
                 name: "trail",
                 displayKey: "name",
                 source: trailBH.ttAdapter(),
                 templates: {
-                    header: "<h4 class='typeahead-header'><span class='icon icon-trail'></span>&nbsp;Trail Heads</h4>"  
+                    header: "<h1 class='typeahead-header'><span class='icon icon-trail'></span>&nbsp;Trail Heads</h1>"  
                 }
             }, {
                 name: "ski",
                 displayKey: "name",
                 source: skiBH.ttAdapter(),
                 templates: {
-                    header: "<h4 class='typeahead-header'><span class='icon icon-ski'></span>&nbsp;Ski Areas</h4>"  
+                    header: "<h1 class='typeahead-header'><span class='icon icon-ski'></span>&nbsp;Ski Areas</h1>"  
                 }
             }, {
                 name: "esri-geocoder",
                 displayKey: "name",
                 source: esriBH.ttAdapter(),
                 templates: {
-                    header: "<h4 class='typeahead-header'><span class='icon icon-map-marker'></span>&nbsp;Addresses and Places</h4>"  
+                    header: "<h1 class='typeahead-header'><span class='icon icon-map-marker'></span>&nbsp;Addresses and Places</h1>"  
                 }
             }).on("typeahead:selected", function (obj, datum) {
                 // what happens when a user selects\clicks a suggestion
@@ -324,14 +325,14 @@ define(["dojo/_base/declare", "esri/map", "esri/geometry/Extent", "esri/geometry
                         
                         $.getJSON(url, function(result) {
                             // create a point from the result (and give it a little scooch north) and zoom the map to it
-                            var pt = new Point(result.features[0].geometry.x, result.features[0].geometry.y + .004);
+                            var pt = new Point(result.features[0].geometry.x, result.features[0].geometry.y + .001);
                             map.centerAndZoom(pt, 14);
                             
                             // put the name in the graphics layer of the map
                             var text =  new esri.symbol.TextSymbol(datum.name)
                             .setColor(new esri.Color("#064780"))
                             .setAlign(esri.symbol.Font.ALIGN_START)
-                            .setFont(new esri.symbol.Font("32pt",esri.symbol.Font.STYLE_NORMAL, esri.symbol.Font.VARIANT_NORMAL,esri.symbol.Font.WEIGHT_BOLD,"Arial"));
+                            .setFont(new esri.symbol.Font("24px",esri.symbol.Font.STYLE_NORMAL, esri.symbol.Font.VARIANT_NORMAL,esri.symbol.Font.WEIGHT_BOLD,"Arial"));
                             var graphic = new esri.Graphic(pt, text);
                             map.graphics.add(graphic);
                         });
