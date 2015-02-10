@@ -1,8 +1,8 @@
 <!DOCTYPE html>
 <html>
     <head>
-        <title>arcgis autocomplete</title>
-
+        <title>map autocomplete</title>
+        <link rel="icon" type="image/png" href="img/icon-map-search.png" >
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
@@ -13,26 +13,32 @@
 
     </head>
     <body>
-        <div id="preloader">
+        <div id="preloader"> </div>
 
-        </div>
-
-        <!-- Map -->
         <div id="map"></div>
-
-
+		
         <!-- Search -->
         <div id="searchBox">
-            <input id="searchInput" type="text" placeholder="Search...">
+            <input id="searchInput" type="text" placeholder="Search (try these: pass, sno, creek)">
             <span id="search-icon" class="icon icon-map-search"></span>
             <span id="search-loading-icon"></span>
         </div>
 
+		<!-- suggested searches 
+        <div id="suggestions">
+            <b>Try these search suggestions</b>
+            <ul id="suggestions-list">
+                <li>pass</li>
+                <li>sno</li>
+                <li>creek</li>
+				<li>ski</li>
+            </ul>
+        </div>
+		-->
+		
         <script type="text/javascript">
             var package_path = window.location.pathname.substring(0, window.location.pathname.lastIndexOf('/'));
             var dojoConfig = {
-                // The locationPath logic below may look confusing but all its doing is
-                // enabling us to load the api from a CDN and load local modules from the correct location.
                 packages : [{
                     name : "application",
                     location : package_path + '/js'

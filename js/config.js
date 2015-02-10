@@ -1,10 +1,18 @@
 var config = {
-    featureLayerUrl: "",
+    featureServerUrl: "http://services.arcgis.com/T4FFVOBhIY0maRRS/ArcGIS/rest/services/wenatchee_rec_sites/FeatureServer/",
+    featureLayerIndexes: {
+        info: 0,
+        ski: 1,
+        picnic: 2,
+        boat: 3,
+        trail:4,
+        camp:5
+    },
     initExtent: {
-        xmin:-126.5,
-        ymin:46,
+        xmin:-124.5,
+        ymin:46.5,
         xmax:-117.5,
-        ymax:48,
+        ymax:48.5,
         spatialReference:{"wkid":4326}
     },
     arcgisGeocodingBaseUrl: "http://geocode.arcgis.com/arcgis/rest/services/World/GeocodeServer/"
