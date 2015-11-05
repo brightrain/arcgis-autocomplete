@@ -1,5 +1,5 @@
 var config = {
-    featureServerUrl: "http://services.arcgis.com/T4FFVOBhIY0maRRS/ArcGIS/rest/services/wenatchee_rec_sites/FeatureServer/",
+    featureServerUrl: "http://services1.arcgis.com/mRXrgD3LWwGHJmpS/ArcGIS/rest/services/wenatchee_rec/FeatureServer",
     featureLayerIndexes: {
         info: 0,
         ski: 1,
